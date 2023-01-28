@@ -1,0 +1,17 @@
+image: node:10.15.3
+
+pipelines:
+  default:
+    - step:
+        name: Build and Test
+        script:
+          - if [ "$BITBUCKET_BRANCH" == "frontend" ]; then
+              echo "Building and testing frontend code."
+              # Insert commands to build and test frontend code here
+            elif [ "$BITBUCKET_BRANCH" == "backend" ]; then
+              echo "Building and testing backend code."
+              # Insert commands to build and test backend code here
+            else
+              echo "Unknown branch, skipping build and test."
+            fi
+

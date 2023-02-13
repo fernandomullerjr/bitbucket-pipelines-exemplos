@@ -7,10 +7,10 @@ pipelines:
         script:
           - if git diff --name-only $BITBUCKET_COMMIT_PREV..$BITBUCKET_COMMIT | grep -q 'frontend'; then
               echo "Building and testing frontend code."
-              # Insert commands to build and test frontend code here
+              # Insert commands to build and test frontend code here.
             elif git diff --name-only $BITBUCKET_COMMIT_PREV..$BITBUCKET_COMMIT | grep -q 'backend'; then
               echo "Building and testing backend code."
-              # Insert commands to build and test backend code here
+              # Insert commands to build and test backend code here.
             else
               echo "No frontend or backend files modified, skipping build and test."
             fi

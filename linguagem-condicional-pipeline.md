@@ -1,4 +1,5 @@
-o script não ficou bom, preciso que ele seja criado novamente, considerando a condição da linguagem dos arquivos que foram modificados no ato do push
+O script não ficou bom, preciso que ele seja criado novamente, considerando a condição da linguagem dos arquivos que foram modificados no ato do push
+
 
 Claro, aqui está um exemplo de um script de pipeline do Bitbucket que verifica a linguagem dos arquivos modificados no push e executa etapas específicas de acordo com a linguagem:
 
@@ -28,6 +29,7 @@ do
     esac
 done
 ~~~~
+
 
 Este script usa o comando git diff --name-only $BITBUCKET_COMMIT_PREV..$BITBUCKET_COMMIT para obter uma lista de arquivos modificados desde o último commit, e então usa um loop para iterar sobre cada arquivo na lista.
 
